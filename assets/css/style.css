@@ -5052,5 +5052,11 @@ footer.common-footer:before {
     .location__img-block {
         margin-bottom: 40px;
     }
+
+    .location__btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
 }
