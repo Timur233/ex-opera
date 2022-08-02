@@ -1,0 +1,31 @@
+<!-- About -->
+<section id="about" class="about section-padding bg-cream">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+                <div class="section-subtitle">{{ about_sub_title }}</div>
+                <div class="section-title">{{ about_title }}</div>
+                {{ about_desc|raw }}
+                <!-- call -->
+                <div class="reservations">
+                    <div class="icon"><span class="flaticon-call"></span></div>
+                    <div class="text">
+                        <p>цент продаж</p> <a href="tel:{{ site_phone }}">{{ site_phone }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-5">
+                <img 
+                    class="animate-box"
+                    src="https://cms.abpx.kz{{ about_image.path }}"
+                    data-animate-effect="fadeInUp"
+                >
+                <img 
+                    class="about-img--absolute animate-box" 
+                    src="https://cms.abpx.kz{{ about_image_second.path }}"
+                    data-animate-effect="fadeInUp"
+                >
+            </div>
+        </div>
+    </div>
+</section>

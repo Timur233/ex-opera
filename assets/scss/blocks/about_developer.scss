@@ -1,0 +1,64 @@
+.about-developer {
+    &__block {
+        margin-bottom: 64px;
+    }
+
+    &__items {
+        text-align: center;
+    }
+
+    &__logos {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 32px;
+
+        & > a {
+            display: block;
+            text-align: center;
+        }
+
+        & > a > img {
+            display: inline-block;
+            width: 85%;
+        }
+    }
+}
+
+.about-adv {
+    display: flex;
+    align-self: center;
+
+    &__item {
+        flex: 0 1 50%;
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__number {
+        font-size: 66px;
+        font-weight: bold;
+        line-height: 1;
+        background: linear-gradient(99.72deg, #BA823B -18.74%, #ECB147 -6.52%, #FBC153 10.06%, #DEA137 23.58%, #E5AA3F 32.3%, #FCECB5 66.77%, #BA823B 92.51%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-right: 28px;
+    }
+
+    &__title {
+        line-height: 1.4;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        background-color: #fff;
+        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.08);
+        padding: 40px;
+
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

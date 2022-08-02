@@ -1,0 +1,73 @@
+.advantages {
+    &__slide {
+        height: 620px;
+        cursor: pointer;
+        background-size: cover;
+        background-position: left;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 1;
+        transition: width 0.44s ease-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background: linear-gradient(164.84deg, rgba(0, 0, 0, 0) -17.62%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background-color: transparent;
+            transition: background-color .3s;
+        }
+
+        &--active {
+            &::after {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    &__swiper {
+        overflow: visible;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.4;
+        margin-bottom: 16px;
+        z-index: 1;
+        text-transform: uppercase;
+    }
+
+    &__body {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        height: 0px;
+        overflow: hidden;
+        z-index: 1;
+        transition: height .3s;
+
+        & > ul {
+            list-style: disc;
+            margin-top: 0;
+        }
+    }
+}

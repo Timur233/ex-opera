@@ -1,0 +1,25 @@
+<!-- location -->
+<section id="location" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section-subtitle">{{ location_sub_title }}</div>
+                <div class="section-title">{{ location_title }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-12 mb-30 mx-auto">
+                <img 
+                    class="animate-box"
+                    src="https://cms.abpx.kz{{ location_img.path }}"
+                    data-animate-effect="fadeInUp"
+                >
+            </div>
+            <div class="col-md-12 animate-box mx-auto" data-animate-effect="fadeInUp">
+                {{ location_desc|raw }}
+            </div>
+        </div>
+    </div>
+</section>

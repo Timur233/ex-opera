@@ -1,0 +1,66 @@
+<!-- Modal -->
+<div 
+    class="modal fade" 
+    id="callbackModal" 
+    tabindex="-1" 
+    aria-labelledby="callbackModal" 
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="booking-box m-0 px-5">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="head-box">
+                    <h4>Оставьте заявку</h4>
+                </div>
+                <div class="booking-inner clearfix">
+                    <form 
+                      action="#" 
+                      class="callback-h__form form1 clearfix" 
+                      onsubmit="frontend.form(this); return false"
+                    >
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input1_wrapper">
+                                    <label id="modal_form_name">Ваше имя</label>
+                                    <div class="input1_inner user">
+                                        <input 
+                                          type="text" 
+                                          name="name"
+                                          class="form-control input input-group__input" 
+                                          placeholder="Имя" 
+                                          id="modal_form_name"
+                                          fieldname="Имя"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input1_wrapper">
+                                    <label id="modal_form_phone">Ваш телефон</label>
+                                    <div class="input1_inner phone">
+                                        <input 
+                                          type="text" 
+                                          name="phone"
+                                          class="form-control input input-group__input" 
+                                          placeholder="Телефон" 
+                                          id="modal_form_phone"
+                                          fieldname="Телефон"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button 
+                                  type="submit" 
+                                  class="btn-form1-submit mt-15"
+                                >Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

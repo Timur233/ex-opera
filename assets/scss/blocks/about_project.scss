@@ -1,0 +1,109 @@
+.about-project {
+    padding-top: 160px;
+    
+    &__desc {
+        margin-bottom: spacer(11);
+
+        & ul {
+            list-style: none;
+
+            &>li {
+                position: relative;
+            
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 12px;
+                    height: 2px;
+                    top: 50%;
+                    left: spacer(-6);
+                    margin-top: -2px;
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+
+    &__left {
+        padding-right: spacer(10);
+
+        @media (max-width: 830px) {
+            width: 100%;
+            margin-bottom: spacer(10);
+        }
+    }
+
+    &__right {
+        @media (max-width: 830px) {
+            width: 100%;
+        }
+    }
+
+    &__flex-block {
+        align-items: center;
+    }
+
+    &__images {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    &__image-one {
+        max-width: 70%;
+        margin-bottom: 80px;
+    }
+
+    &__image-two {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__author-label {
+        color: $text;
+        display: block;
+        margin-top: spacer(16);
+    }
+
+}
+
+.benefits {
+    padding-left: spacer(15);
+    padding-top: spacer(2);
+
+    @media (max-width: 830px) {
+        padding-left: spacer(0);
+        padding-top: spacer(0);
+    }
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: spacer(7);
+
+        @media (max-width: 830px) {
+            padding: 0 spacer(5);
+            text-align: center;
+        }
+    }
+
+    &__img {
+        margin-bottom: spacer(4);
+
+        @media (max-width: 830px) {
+            display: inline-block;
+            margin: 0 auto spacer(4);
+        }
+    }
+
+    &__title {
+        margin-bottom: spacer(2);
+    }
+
+    &__info {
+        font-weight: 300;
+        color: $text-gray;
+    }
+}

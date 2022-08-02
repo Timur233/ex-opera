@@ -1,0 +1,74 @@
+@mixin col-flex($size) {
+    flex: 0 0 auto;
+    width: $size;
+}
+
+.container {
+    max-width: $container;
+    padding: 0 spacer(4);
+    margin: 0 auto;
+}
+
+.container-fluid {
+    width: $container-fluid;
+    max-width: 1730px;
+    padding: 0 spacer(12);
+    margin: 0 auto;
+
+    @media (max-width: ($container + 160)) {
+        width: auto;
+        max-width: $container;
+        padding: 0 spacer(4);
+    }
+}
+
+.flex {
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__1-2 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    &__1-3 {
+        flex: 0 0 auto;
+        width: calc(100% / 3);
+    }
+
+    &__5 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*5);
+    }
+
+    &__6 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*6);
+    }
+
+    &__7 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*7);
+    }
+
+    &__9 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*9);
+    }
+
+    &__2 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*2);
+    }
+
+    &__3 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*3);
+    }
+
+    &--v-center {
+        align-items: center;
+    }
+} 
+
