@@ -7,13 +7,13 @@
     <link rel="shortcut icon" href="https://cms.abpx.kz/{{ site_favicon.path }}" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
     <link rel="stylesheet" href="{{ base_url }}assets/css/plugins.css" />
-    <link rel="stylesheet" href="{{ base_url }}assets/css/style.css" />
+    <link rel="stylesheet" href="{{ base_url }}assets/css/style.css?v=1" />
 
-    {# site_scripts_in_head|raw #}
+    {{ site_scripts_in_head|raw }}
   
   </head>
   <body>
-    {# site_scripts_in_body|raw #}
+    {{ site_scripts_in_body|raw }}
 
     <!-- Preloader -->
     <div class="preloader-bg"></div>
@@ -1559,6 +1559,6 @@
   <script src="{{ base_url }}assets/js/smooth-scroll.min.js"></script>
   <script src="{{ base_url }}assets/js/custom.js"></script>
 
-  {# site_scripts_in_footer|raw #}
+  {{ site_scripts_in_footer|raw }}
 
 </html>
