@@ -5025,14 +5025,32 @@ footer.common-footer:before {
 
     .nav-scroll .logo-img {
         width: 100px;
-    }
-
-    .logo-img {
         margin-left: 16px;
     }
 
     .about-img--absolute {
         display: none;
+    }
+
+    .locations__filter {
+        margin-bottom: 40px;
+    }
+
+    .location__info {
+        order: 1;
+        text-align: center;
+    }
+    
+    .location {
+        height: auto;
+    }
+    
+    .location__square {
+        margin-bottom: 0;
+    }
+    
+    .location__img-block {
+        margin-bottom: 40px;
     }
     
 }
