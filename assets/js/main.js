@@ -1,3 +1,5 @@
+/* global $ */
+
 const frontend = (function () {
     function authorMarker() {
         console.log('%cExclusive Qurylys with Iskandarov Timur', 'color:#fff; background-color:#7eb621; padding: 8px 15px; font-size: 14px; border-radius: 4px; text-align:center');
@@ -222,30 +224,59 @@ const frontend = (function () {
             html += '<div class="locations-result__carousel owl-carousel">';
 
             locations.forEach((location, index) => {
+                let duplexHtml = '';
+
+                if (location.duplex) {
+                    duplexHtml = `
+                        <a 
+                            class="location__download location__download--duplex" 
+                            href="https://cms.abpx.kz${location.duplex.path}" 
+                            onclick="frontend.popup(this); 
+                            return false"
+                        >
+                        +Мансарда
+                        </a>
+                    `;
+                }
+
                 html += `
-            <div class="locations-result__item">
-              <div class="row location">
-                <div class="col-md-4 location__info">
-                  <div class="locations-result__data">
-                    <h4 class="location__title">${location.rooms} комнатная</h4>
-                    <p class="location__square">Площадь: <b>${location.square} м<sup>2</sup></b></p>
-                  </div>
-                  <div class="location__btn-group">
-                    <a class="location__download" href="https://cms.abpx.kz${location.plan.path}" onclick="frontend.popup(this); return false">
-                      Скачать планировку
-                    </a>
-                    <button class="btn location__btn location__btn--id-${index}" onclick="frontend.modal(); return false;">
-                      Оставить заявку
-                    </button>
-                  </div>
-                </div>
-                <div class="col-md-8 location__img-block d-flex justify-content-center align-items-center">
-                  <a href="https://cms.abpx.kz${location.plan.path}" onclick="frontend.popup(this); return false" >
-                    <img class="location__img" src="https://cms.abpx.kz${location.plan.path}" />
-                  </a>
-                </div>
-              </div>
-            </div>`;
+                    <div class="locations-result__item">
+                    <div class="row location">
+                        <div class="col-md-4 location__info">
+                        <div class="locations-result__data">
+                            <h4 class="location__title">${location.rooms} комнатная</h4>
+                            <p class="location__square">Площадь: <b>${location.square} м<sup>2</sup></b></p>
+                        </div>
+                        <div class="location__btn-group">
+                            ${duplexHtml}
+                            <a 
+                                class="location__download" 
+                                href="https://cms.abpx.kz${location.plan.path}" 
+                                onclick="frontend.popup(this); 
+                                return false"
+                            >
+                            Скачать планировку
+                            </a>
+                            <button 
+                                class="btn location__btn location__btn--id-${index}" 
+                                onclick="frontend.modal(); return false;"
+                            >
+                            Оставить заявку
+                            </button>
+                        </div>
+                        </div>
+                        <div class="col-md-8 location__img-block d-flex justify-content-center align-items-center">
+                        <a 
+                            href="https://cms.abpx.kz${location.plan.path}" 
+                            data-duplex="${location.duplex ? `https://cms.abpx.kz${location.duplex.path}` : ''}"
+                            onclick="frontend.popup(this); return false" 
+                        >
+                            <img class="location__img" src="https://cms.abpx.kz${location.plan.path}" />
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                `;
             });
 
             html += '</div>';
@@ -437,13 +468,26 @@ const frontend = (function () {
         $('#callbackModal').modal('show');
     }
 
-    function openPopup(link) {
+    function openPopup(el) {
+        const links = [
+            el.href,
+            el.getAttribute('data-duplex'),
+        ];
+        const photos = links.map((i) => {
+            if (i) {
+                return {
+                    src: i,
+                };
+            }
+        });
+
         $.magnificPopup.open({
-            items: {
-                src: link.href,
-            },
+            items:     photos,
             mainClass: 'plan-popup',
             type:      'image',
+            gallery:   {
+                enabled: true,
+            },
         });
     }
 

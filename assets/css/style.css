@@ -5027,6 +5027,11 @@ footer.common-footer:before {
     display: flex !important;
 }
 
+.location__download--duplex {
+    font-weight: 600;
+    color: #d74949;
+}
+
 @media (max-width: 768px) {
     .developer__logo {
         left: 50%;
