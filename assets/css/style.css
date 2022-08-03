@@ -5000,9 +5000,20 @@ footer.common-footer:before {
     max-width: 100%;
     max-height: 100%;
     height: 600px;
+    width: 600px;
+    padding: 84px;
+}
+
+.plan-popup .mfp-figure:after {
+    background: #fff;
 }
 
 @media (max-width: 720px) {
+    .plan-popup .mfp-img {
+        height: 500px;
+        width: 500px;
+    }
+
     .about-adv {
         flex-wrap: wrap;
     }
@@ -5059,4 +5070,11 @@ footer.common-footer:before {
         align-items: center;
     }
     
+}
+
+@media (max-width: 500px) {
+    .plan-popup .mfp-img {
+        height: 400px;
+        width: 400px;
+    }
 }
