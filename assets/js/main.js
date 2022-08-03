@@ -365,7 +365,7 @@ const frontend = (function () {
 
                 btnsGroup.classList = 'locations-filter__group filter-group';
 
-                squaresButtons = [...squares].sort((a, b) => a - b);
+                squaresButtons = [...squares].sort((a, b) => a - b).slice(0, 16);
                 squaresButtons.forEach((square) => {
                     const btn = document.createElement('button');
 
