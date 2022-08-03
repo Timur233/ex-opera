@@ -5009,6 +5009,10 @@ footer.common-footer:before {
 }
 
 @media (max-width: 720px) {
+    .mfp-wrap {
+        height: 100% !important;
+    }
+    
     .plan-popup .mfp-img {
         height: 500px;
         width: 500px;
