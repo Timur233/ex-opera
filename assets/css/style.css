@@ -5088,4 +5088,8 @@ footer.common-footer:before {
         height: 400px;
         width: 400px;
     }
+    
+    .developer__img {
+        width: 80px;
+    }
 }
