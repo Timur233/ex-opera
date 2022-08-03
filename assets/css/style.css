@@ -5024,7 +5024,7 @@ footer.common-footer:before {
 
 .locations-result__carousel {
     max-height: 100%;
-    display: flex;
+    display: flex !important;
 }
 
 @media (max-width: 768px) {
