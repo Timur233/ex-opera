@@ -5008,11 +5008,18 @@ footer.common-footer:before {
     background: #fff;
 }
 
+@media (max-width: 768px) {
+    .developer__logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 720px) {
     .mfp-wrap {
         height: 100% !important;
     }
-    
+
     .plan-popup .mfp-img {
         height: 500px;
         width: 500px;
