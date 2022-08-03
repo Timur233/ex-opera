@@ -5022,6 +5022,11 @@ footer.common-footer:before {
     background: linear-gradient(322deg, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 100%);
 }
 
+.locations-result__carousel {
+    max-height: 100%;
+    display: flex;
+}
+
 @media (max-width: 768px) {
     .developer__logo {
         left: 50%;
