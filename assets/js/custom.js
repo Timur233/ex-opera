@@ -556,6 +556,7 @@ $(document).ready(() => {
 
         $('span').removeClass('animated fadeInUp');
         $('h4').removeClass('animated fadeInUp');
+        $('h3').removeClass('animated fadeInUp');
         $('h1').removeClass('animated fadeInUp');
         $('p').removeClass('animated fadeInUp');
         $('.butn-light').removeClass('animated fadeInUp');
@@ -563,6 +564,8 @@ $(document).ready(() => {
         $('.owl-item').not('.cloned').eq(item).find('span')
             .addClass('animated fadeInUp');
         $('.owl-item').not('.cloned').eq(item).find('h4')
+            .addClass('animated fadeInUp');
+        $('.owl-item').not('.cloned').eq(item).find('h3')
             .addClass('animated fadeInUp');
         $('.owl-item').not('.cloned').eq(item).find('h1')
             .addClass('animated fadeInUp');
